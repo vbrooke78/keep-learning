@@ -1,3 +1,3 @@
 export const Header = () => {
-  return <h1>Northcoders keep learning - Front end tech tests</h1>;
+  return <h1>Northcoders keep learning</h1>;
 };
