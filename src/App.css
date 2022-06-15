@@ -1,11 +1,49 @@
 .App {
   text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
 .links {
   padding: 10px 25px;
   text-decoration: none;
   color: #000;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginInput {
+  display: flex;
+  height: 2rem;
+  margin: 5px;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signUpInput {
+  display: flex;
+  height: 2rem;
+  margin: 5px;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.signUpButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .navBar {
