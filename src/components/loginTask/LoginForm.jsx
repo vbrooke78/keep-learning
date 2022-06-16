@@ -1,8 +1,11 @@
-import { validateName } from '../utils/ValidateForm';
-import { validateEmail } from '../utils/ValidateForm';
-import { validatePassword } from '../utils/ValidateForm';
+import { useNavigate } from 'react-router-dom';
+import { validateName } from './utils/ValidateForm';
+import { validateEmail } from './utils/ValidateForm';
+import { validatePassword } from './utils/ValidateForm';
 
 export const LoginForm = ({ userData, setUserData }) => {
+  const navigate = useNavigate();
+
   const handleValidateName = (e) => {
     setUserData({ name: e.target.value });
     validateName(e.target.value);
@@ -18,15 +21,19 @@ export const LoginForm = ({ userData, setUserData }) => {
     validatePassword(e.target.value);
   };
 
+  const handleSubmit = () => {
+    navigate('/signUpSuccess');
+  };
+
   return (
-    <form className="signUpForm">
+    <form className="signUpForm" onSubmit={handleSubmit}>
       <label htmlFor="name" className="signUpInput">
         Your name
       </label>
       <input
         id="name"
         className="signUpInput"
-        value={userData.name}
+        value={userData.name || ''}
         required
         onChange={handleValidateName}
       />
@@ -37,7 +44,7 @@ export const LoginForm = ({ userData, setUserData }) => {
         id="email"
         type="email"
         className="signUpInput"
-        value={userData.email}
+        value={userData.email || ''}
         required
         onChange={handleValidateEmail}
       />
@@ -47,7 +54,7 @@ export const LoginForm = ({ userData, setUserData }) => {
       <input
         id="password"
         className="signUpInput"
-        value={userData.password}
+        value={userData.password || ''}
         required
         onChange={handleValidatePassword}
       />

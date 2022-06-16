@@ -3,7 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Header } from './components/Header';
 import { HomePage } from './components/HomePage';
-import { LoginPage } from './components/LogInPage';
+import { LoginPage } from './components/loginTask/LogInPage';
+import { LoginSuccessPage } from './components/loginTask/LoginSuccessPage';
+import { SignUpSuccessPage } from './components/loginTask/SignUpSuccessPage';
 import { Nav } from './components/Nav';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           path="/login"
           element={<LoginPage userData={userData} setUserData={setUserData} />}
         />
+        <Route path="/loginSuccess" element={<LoginSuccessPage />} />
+        <Route path="/signUpSuccess" element={<SignUpSuccessPage />} />
       </Routes>
     </div>
   );

@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { LoginForm } from './LoginForm';
-import { validateEmail } from '../utils/ValidateForm';
-import { validatePassword } from '../utils/ValidateForm';
+import { validateEmail } from './utils/ValidateForm';
+import { validatePassword } from './utils/ValidateForm';
 
 export const LoginPage = ({ userData, setUserData }) => {
   const [showSignUp, setShowSignUp] = useState(false);
+  const navigate = useNavigate();
 
   const handleValidateEmail = (e) => {
     setUserData({ email: e.target.value });
@@ -16,10 +18,14 @@ export const LoginPage = ({ userData, setUserData }) => {
     validatePassword(e.target.value);
   };
 
+  const handleSubmit = () => {
+    navigate('/loginSuccess');
+  };
+
   return (
     <>
       <h1>Login Page</h1>
-      <form className="loginForm">
+      <form className="loginForm" onSubmit={handleSubmit}>
         <label htmlFor="email" className="loginInput">
           Email
         </label>
@@ -28,7 +34,7 @@ export const LoginPage = ({ userData, setUserData }) => {
           type="email"
           name="email"
           className="loginInput"
-          value={userData.email}
+          value={userData.email || ''}
           required
           onChange={handleValidateEmail}
         />
@@ -39,7 +45,7 @@ export const LoginPage = ({ userData, setUserData }) => {
           id="password"
           type="password"
           className="loginInput"
-          value={userData.password}
+          value={userData.password || ''}
           required
           onChange={handleValidatePassword}
         />
