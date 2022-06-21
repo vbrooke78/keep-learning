@@ -4,12 +4,21 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+/* navBar */
 .links {
   padding: 10px 25px;
   text-decoration: none;
   color: #000;
 }
 
+.navBar {
+  display: flex;
+  justify-content: center;
+  background-color: yellowgreen;
+  height: 40px;
+}
+
+/* loginTask */
 .loginForm {
   display: flex;
   flex-direction: column;
@@ -46,9 +55,26 @@
   justify-content: center;
 }
 
-.navBar {
+/* movieListTask */
+.searchBar {
+  margin: 30px;
+}
+
+.searchInput {
+  width: 20%;
+}
+
+th {
+  text-decoration: underline;
+}
+
+table {
   display: flex;
   justify-content: center;
-  background-color: yellowgreen;
-  height: 40px;
+}
+
+td {
+  width: 200px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }

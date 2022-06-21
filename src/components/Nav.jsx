@@ -9,7 +9,7 @@ export const Nav = () => {
       <Link to="/login" className="links">
         Login Page
       </Link>
-      <Link to="/movie" className="links">
+      <Link to="/movies" className="links">
         Movie List Filter
       </Link>
       <Link to="/states" className="links">
