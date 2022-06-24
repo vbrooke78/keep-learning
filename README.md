@@ -10,4 +10,4 @@ These are a series of challenges provided by Northcoders following their bootcam
 
 # HOSTED VERSION
 
-The app is hosted on Netlify at
+The app is hosted on Netlify at https://postgrad-learning.netlify.app
