@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { StatesGame } from './components/50StatesTask/StatesGame';
 import { Header } from './components/Header';
 import { HomePage } from './components/HomePage';
 import { LoginPage } from './components/loginTask/LogInPage';
@@ -21,6 +22,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
+
         {/* login task */}
         <Route
           path="/login"
@@ -28,8 +30,12 @@ function App() {
         />
         <Route path="/loginSuccess" element={<LoginSuccessPage />} />
         <Route path="/signUpSuccess" element={<SignUpSuccessPage />} />
+
         {/* movie list task */}
         <Route path="/movies" element={<MovieList />} />
+
+        {/* 50 US states game task */}
+        <Route path="/states" element={<StatesGame />} />
       </Routes>
     </div>
   );

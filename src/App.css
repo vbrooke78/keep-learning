@@ -78,3 +78,43 @@ td {
   padding-bottom: 10px;
   padding-top: 10px;
 }
+
+/* 50 US states game */
+.guessInput {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: large;
+}
+
+input {
+  margin-left: 10px;
+}
+
+textarea {
+  width: 80%;
+  height: 150px;
+  padding: 12px 20px;
+  /* box-sizing: border-box; */
+  border: 2px solid yellowgreen;
+  border-radius: 4px;
+  background-color: rgb(220, 241, 178);
+  font-size: 16px;
+  resize: none;
+}
+
+p {
+  font-size: large;
+}
+
+button {
+  width: 15%;
+  /* height: 150px; */
+  padding: 12px 20px;
+  /* box-sizing: border-box; */
+  border: 2px solid yellowgreen;
+  border-radius: 4px;
+  background-color: rgb(193, 239, 100);
+  font-size: 16px;
+  margin: 20px;
+}
