@@ -1,17 +1,37 @@
+import { useState } from 'react';
 import movies from './utils/movies.json';
 
 export const MovieList = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const [searchParam] = useState(['title', 'director', 'genre', 'cast']);
+
+  const search = () => {
+    return movies.filter((movie) => {
+      return searchParam.some((newItem) => {
+        return (
+          movie[newItem]
+            .toString()
+            .toLowerCase()
+            .indexOf(searchTerm.toLowerCase()) > -1
+        );
+      });
+    });
+  };
+
   return (
     <>
       <h1>Movie List Filter</h1>
-      <div className="searchBar">
-        <label htmlFor="search">Search: </label>
+      <form className="searchBar">
+        <label htmlFor="searchList">Search: </label>
         <input
-          name="search"
+          id="searchList"
           className="searchInput"
           placeholder="search by Title, Director, Genre or cast member "
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
-      </div>
+      </form>
       <table className="table">
         <tbody>
           <tr className="tableHeader">
@@ -22,7 +42,7 @@ export const MovieList = () => {
             <th>Cast</th>
             <th>Average Rating</th>
           </tr>
-          {movies.map((movie) => {
+          {search(movies).map((movie) => {
             return (
               <tr key={movie.title}>
                 <td>{movie.title}</td>
