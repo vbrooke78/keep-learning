@@ -3,10 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { StatesGame } from './components/50StatesTask/StatesGame';
 import { Header } from './components/Header';
+import { HiddenX } from './components/hiddenXTask/HiddenX';
 import { HomePage } from './components/HomePage';
 import { LoginPage } from './components/loginTask/LogInPage';
 import { LoginSuccessPage } from './components/loginTask/LoginSuccessPage';
 import { SignUpSuccessPage } from './components/loginTask/SignUpSuccessPage';
+import { Menu } from './components/menuTask/Menu';
+import { Messenger } from './components/messagingTask/Messenger';
 import { MovieList } from './components/movieListTask/MovieList';
 import { Nav } from './components/Nav';
 
@@ -23,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
 
-        {/* login task */}
+        {/* Login task */}
         <Route
           path="/login"
           element={<LoginPage userData={userData} setUserData={setUserData} />}
@@ -31,11 +34,20 @@ function App() {
         <Route path="/loginSuccess" element={<LoginSuccessPage />} />
         <Route path="/signUpSuccess" element={<SignUpSuccessPage />} />
 
-        {/* movie list task */}
+        {/* Movie list task */}
         <Route path="/movies" element={<MovieList />} />
 
         {/* 50 US states game task */}
         <Route path="/states" element={<StatesGame />} />
+
+        {/* Hidden X task */}
+        <Route path="/hiddenX" element={<HiddenX />} />
+
+        {/* Menu task */}
+        <Route path="/menu" element={<Menu />} />
+
+        {/* Messaging task */}
+        <Route path="/messaging" element={<Messenger />} />
       </Routes>
     </div>
   );
