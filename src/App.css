@@ -95,7 +95,6 @@ textarea {
   width: 80%;
   height: 150px;
   padding: 12px 20px;
-  /* box-sizing: border-box; */
   border: 2px solid yellowgreen;
   border-radius: 4px;
   background-color: rgb(220, 241, 178);
@@ -108,10 +107,12 @@ p {
 }
 
 button {
+  margin-left: 10px;
+}
+
+.customButton {
   width: 15%;
-  /* height: 150px; */
   padding: 12px 20px;
-  /* box-sizing: border-box; */
   border: 2px solid yellowgreen;
   border-radius: 4px;
   background-color: rgb(193, 239, 100);
