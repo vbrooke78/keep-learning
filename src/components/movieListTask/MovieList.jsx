@@ -37,8 +37,8 @@ export const MovieList = () => {
           <hr />
           <h3>Instructions:</h3>
           <p>
-            Your task is to build a similar movie search bar as below. We have
-            given the data for you in a movies.json file.
+            Your task is to build a movie search bar. We have provided the data
+            for you in a movies.json file.
           </p>
           <h4>You must complete the following:</h4>
           <ul>
@@ -57,7 +57,7 @@ export const MovieList = () => {
           </ul>
           <h4>Challenge:</h4>
           <p>
-            Can you create a 500 milisecond delay before updating the list once
+            Can you create a 500 millisecond delay before updating the list once
             the user has stopped typing?
           </p>
           <hr />

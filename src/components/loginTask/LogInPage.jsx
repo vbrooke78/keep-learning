@@ -26,7 +26,7 @@ export const LoginPage = ({ userData, setUserData }) => {
           <hr />
           <h3>Instructions:</h3>
           <p>
-            Your task is to build a login form where a user input their email
+            Your task is to build a login form where a user inputs their email
             and password to enter a website. Or, where they can sign up.
           </p>
           <h4>You must complete the following:</h4>
