@@ -40,14 +40,14 @@ function App() {
         {/* 50 US states game task */}
         <Route path="/states" element={<StatesGame />} />
 
-        {/* Hidden X task */}
-        <Route path="/hiddenX" element={<HiddenX />} />
-
         {/* Menu task */}
         <Route path="/menu" element={<Menu />} />
 
+        {/* Hidden X task */}
+        {/* <Route path="/hiddenX" element={<HiddenX />} /> */}
+
         {/* Messaging task */}
-        <Route path="/messaging" element={<Messenger />} />
+        {/* <Route path="/messaging" element={<Messenger />} /> */}
       </Routes>
     </div>
   );

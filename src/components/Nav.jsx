@@ -15,15 +15,15 @@ export const Nav = () => {
       <Link to="/states" className="links">
         50 US States game
       </Link>
-      <Link to="/hiddenX" className="links">
-        Find the X game
-      </Link>
       <Link to="/menu" className="links">
         Drop down menu
       </Link>
+      {/* <Link to="/hiddenX" className="links">
+        Find the X game
+      </Link>
       <Link to="/messaging" className="links">
         Pseudo IM Service
-      </Link>
+      </Link> */}
     </nav>
   );
 };
