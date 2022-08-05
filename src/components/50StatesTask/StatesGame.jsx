@@ -25,7 +25,7 @@ export const StatesGame = () => {
         setGuess('');
       }
     });
-  }, [guess]);
+  }, [guess, answers, score]);
 
   return (
     <>
@@ -66,7 +66,6 @@ export const StatesGame = () => {
           setAnswers((answers) => {
             const newAnswers = [...answers];
             newAnswers.push(...missingAnswers);
-            console.log(newAnswers.length);
             if (newAnswers.length === 50) {
               newAnswers.push('\n\nBetter luck next time!');
             }
