@@ -4,6 +4,10 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+li {
+  list-style-type: none;
+}
+
 /* navBar */
 .links {
   padding: 10px 25px;

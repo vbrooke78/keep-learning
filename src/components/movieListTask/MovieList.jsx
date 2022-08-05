@@ -6,6 +6,8 @@ export const MovieList = () => {
 
   const [searchParam] = useState(['title', 'director', 'genre', 'cast']);
 
+  const [showInstructions, setShowInstructions] = useState(false);
+
   const search = () => {
     return movies.filter((movie) => {
       return searchParam.some((newItem) => {
@@ -22,6 +24,45 @@ export const MovieList = () => {
   return (
     <>
       <h1>Movie List Filter</h1>
+      <button
+        className="instructionsButton"
+        onClick={() => setShowInstructions((bool) => !bool)}
+      >
+        Show/Hide Instructions
+      </button>
+      <br />
+      <br />
+      {showInstructions && (
+        <section>
+          <hr />
+          <h3>Instructions:</h3>
+          <p>
+            Your task is to build a similar movie search bar as below. We have
+            given the data for you in a movies.json file.
+          </p>
+          <h4>You must complete the following:</h4>
+          <ul>
+            <li>
+              A results table displaying the title, director, genre, cast and
+              average rating of each movie,
+            </li>
+            <li>
+              A search bar that will only display movies that match the current
+              search,
+            </li>
+            <li>
+              The search bar must be able to search for any movie title,
+              director, genre or cast member,
+            </li>
+          </ul>
+          <h4>Challenge:</h4>
+          <p>
+            Can you create a 500 milisecond delay before updating the list once
+            the user has stopped typing?
+          </p>
+          <hr />
+        </section>
+      )}
       <form className="searchBar">
         <label htmlFor="searchList">Search: </label>
         <input

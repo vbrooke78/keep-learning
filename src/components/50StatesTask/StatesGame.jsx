@@ -8,6 +8,8 @@ export const StatesGame = () => {
 
   const [score, setScore] = useState(0);
 
+  const [showInstructions, setShowInstructions] = useState(false);
+
   useEffect(() => {
     const regex = new RegExp(`^${guess}$`, 'i');
     states.forEach((state) => {
@@ -30,6 +32,54 @@ export const StatesGame = () => {
   return (
     <>
       <h1>50 US States Game</h1>
+      <button
+        className="instructionsButton"
+        onClick={() => setShowInstructions((bool) => !bool)}
+      >
+        Show/Hide Instructions
+      </button>
+      <br />
+      <br />
+      {showInstructions && (
+        <section>
+          <hr />
+          <h3>Instructions:</h3>
+          <p>
+            Your task is to build a mini game where a player can guess all 50 US
+            states...
+          </p>
+          <h4>You must complete the following:</h4>
+          <ul>
+            <li>
+              Create an input box where the user can type any case insensitive
+              state and it will accept the answer,
+            </li>
+            <li>
+              Create text box that will store all the correct answers the player
+              has given,
+            </li>
+            <li>
+              The text box should not accept duplicate values, regardless of
+              case sensitivity,
+            </li>
+            <li>Create a restart button that will reset the game,</li>
+            <li>
+              A give up button that will show the remaining answers that the
+              player did not guess,
+            </li>
+            <li>
+              A counter that will tell the player how many states he has
+              correctly guessed
+            </li>
+          </ul>
+          <h4>Challenge:</h4>
+          <p>
+            Add a timer that when it reaches 0 will disable the input box until
+            restart is pressed
+          </p>
+          <hr />
+        </section>
+      )}
       <h2>Can you name all 50 US states?</h2>
       <form className="guessInput">
         <label htmlFor="guess">Enter your guess here: </label>
